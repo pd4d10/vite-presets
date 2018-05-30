@@ -8,7 +8,7 @@ config.devtool = 'cheap-source-map'
 
 webpack(config, (err, stats) => {
   if (err || stats.hasErrors()) {
-    console.error(err)
+    console.error(err, stats.toString())
   }
   // Done processing
 })

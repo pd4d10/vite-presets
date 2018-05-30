@@ -21,8 +21,19 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
         exclude: /node_modules/,
+        use: {
+          loader: require.resolve('babel-loader'),
+          options: {
+            babelrc: false,
+            presets: [require('@babel/preset-react').default],
+            plugins: [
+              require('@babel/plugin-proposal-class-properties').default,
+              require('@babel/plugin-proposal-object-rest-spread').default,
+              require('@babel/plugin-transform-destructuring').default,
+            ],
+          },
+        },
       },
     ],
   },
@@ -35,7 +46,7 @@ const config = {
         { from: 'src/static', to: 'static' },
         { from: 'src/manifest.json', to: '' },
       ],
-      {}
+      {},
     ),
   ],
 }
@@ -79,7 +90,7 @@ const checkHtml = html => {
       new HtmlWebpackPlugin({
         filename: html,
         chunks: [base],
-      })
+      }),
     )
   } else if (fs.existsSync(index)) {
     config.entry[base] = index
@@ -87,7 +98,7 @@ const checkHtml = html => {
       new HtmlWebpackPlugin({
         filename: html,
         chunks: [base],
-      })
+      }),
     )
   } else {
     throw new Error(`Please provide ${html}, ${js} or ${index}`)
