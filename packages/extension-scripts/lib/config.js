@@ -88,6 +88,7 @@ const checkHtml = html => {
     config.entry[base] = js
     config.plugins.push(
       new HtmlWebpackPlugin({
+        title: manifest.name,
         filename: html,
         chunks: [base],
       }),
@@ -96,6 +97,7 @@ const checkHtml = html => {
     config.entry[base] = index
     config.plugins.push(
       new HtmlWebpackPlugin({
+        title: manifest.name,
         filename: html,
         chunks: [base],
       }),
