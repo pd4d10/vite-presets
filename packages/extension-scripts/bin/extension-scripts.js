@@ -13,6 +13,9 @@ switch (command) {
   case 'build':
     require('../lib/build')
     break
+  case 'package':
+    require('../lib/package')
+    break
   default:
     throw new Error('Unknown command')
 }
