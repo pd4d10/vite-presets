@@ -65,7 +65,7 @@ let manifest
 if (fs.existsSync(getFilePath('manifest.json'))) {
   manifest = require(getFilePath('manifest.json'))
 } else if (fs.existsSync(getFilePath('manifest.js'))) {
-  manifest = require(getFilePath('manifest.js'))()
+  manifest = require(getFilePath('manifest.js'))
 } else {
   throw new Error('Please provide manifest.json or js file')
 }
