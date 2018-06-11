@@ -134,6 +134,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.49"
 
+"@babel/plugin-syntax-dynamic-import@^7.0.0-beta.49":
+  version "7.0.0-beta.49"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-dynamic-import/-/plugin-syntax-dynamic-import-7.0.0-beta.49.tgz#f0af7ac6b53676a496093d4a6e2a2ec655c07b78"
+  dependencies:
+    "@babel/helper-plugin-utils" "7.0.0-beta.49"
+
 "@babel/plugin-syntax-jsx@7.0.0-beta.49":
   version "7.0.0-beta.49"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.0.0-beta.49.tgz#15b832504b49f116f9c484e8e40a5e17c542ed13"
@@ -1452,6 +1458,10 @@ gauge@~2.7.3:
     string-width "^1.0.1"
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
+
+generate-json-webpack-plugin@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/generate-json-webpack-plugin/-/generate-json-webpack-plugin-0.3.1.tgz#b5ebb383ba552d8be663ce177ed134f480735144"
 
 get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"

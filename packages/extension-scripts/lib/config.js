@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const GenerateJsonPlugin = require('generate-json-webpack-plugin')
 
 const OUTPUT_FOLDER = 'public'
 
@@ -31,6 +32,7 @@ const config = {
               require('@babel/plugin-proposal-class-properties').default,
               require('@babel/plugin-proposal-object-rest-spread').default,
               require('@babel/plugin-transform-destructuring').default,
+              require('@babel/plugin-syntax-dynamic-import').default,
             ],
           },
         },
@@ -41,13 +43,7 @@ const config = {
     new CleanWebpackPlugin(OUTPUT_FOLDER, {
       root: process.cwd(),
     }),
-    new CopyWebpackPlugin(
-      [
-        { from: 'src/static', to: 'static' },
-        { from: 'src/manifest.json', to: '' },
-      ],
-      {},
-    ),
+    new CopyWebpackPlugin([{ from: 'src/static', to: 'static' }], {}),
   ],
 }
 
@@ -69,6 +65,8 @@ if (fs.existsSync(getFilePath('manifest.json'))) {
 } else {
   throw new Error('Please provide manifest.json or js file')
 }
+
+config.plugins.push(new GenerateJsonPlugin('manifest.json', manifest))
 
 // Add entries
 config.entry = {}
