@@ -1,23 +1,11 @@
 {
   "name": "create-extension",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pd4d10/create-extension.git"
-  },
-  "keywords": [],
-  "author": "Rongjian Zhang <pd4d10@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pd4d10/create-extension/issues"
-  },
-  "homepage": "https://github.com/pd4d10/create-extension#readme",
-  "devDependencies": {
-    "lerna": "^2.11.0"
   }
 }
