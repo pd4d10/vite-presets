@@ -8,7 +8,7 @@ const GenerateJsonPlugin = require('generate-json-webpack-plugin')
 
 const OUTPUT_FOLDER = 'public'
 
-const findDir = dir => path.resolve(dir)
+const findDir = (dir) => path.resolve(dir)
 
 const config = {
   output: {
@@ -47,13 +47,10 @@ const config = {
   ],
 }
 
-const getFilePath = file => findDir(path.resolve('./src', file))
+const getFilePath = (file) => findDir(path.resolve('./src', file))
 
-const withoutExt = file => {
-  return file
-    .split('.')
-    .slice(0, -1)
-    .join('.')
+const withoutExt = (file) => {
+  return file.split('.').slice(0, -1).join('.')
 }
 
 let manifest
@@ -72,11 +69,11 @@ config.plugins.push(new GenerateJsonPlugin('manifest.json', manifest))
 config.entry = {}
 
 // Background scripts
-manifest.background.scripts.forEach(script => {
+manifest.background.scripts.forEach((script) => {
   config.entry[withoutExt(script)] = getFilePath(script)
 })
 
-const checkHtml = html => {
+const checkHtml = (html) => {
   const base = withoutExt(html)
   const js = getFilePath(base + '.js')
   const index = getFilePath(base + '/index.js')
@@ -89,7 +86,7 @@ const checkHtml = html => {
         title: manifest.name,
         filename: html,
         chunks: [base],
-      }),
+      })
     )
   } else if (fs.existsSync(index)) {
     config.entry[base] = index
@@ -98,7 +95,7 @@ const checkHtml = html => {
         title: manifest.name,
         filename: html,
         chunks: [base],
-      }),
+      })
     )
   } else {
     throw new Error(`Please provide ${html}, ${js} or ${index}`)
