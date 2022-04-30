@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/electron" },
+    { "path": "packages/library" },
+    { "path": "packages/web-extension" }
+  ]
+}

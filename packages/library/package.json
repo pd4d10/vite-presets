@@ -1,0 +1,7 @@
+{
+  "name": "@vite-preset/library",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "vite": "^2.0.0"
+  }
+}

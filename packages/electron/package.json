@@ -1,0 +1,7 @@
+{
+  "name": "@vite-preset/electron",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "vite": "^2.0.0"
+  }
+}
