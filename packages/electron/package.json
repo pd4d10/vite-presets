@@ -1,6 +1,11 @@
 {
   "name": "@vite-preset/electron",
   "version": "0.0.1",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "peerDependencies": {
     "vite": "^2.0.0"
   }
