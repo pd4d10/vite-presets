@@ -8,5 +8,10 @@
   "devDependencies": {
     "typescript": "^4.6.4",
     "vite": "^2.9.6"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "proseWrap": "never"
   }
 }
