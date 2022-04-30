@@ -11,7 +11,7 @@ export interface WebExtensionOptions {
   manifest: string | chrome.runtime.Manifest
 }
 
-export function webExtension({
+export default function webExtension({
   manifest: manifestOrPath,
 }: WebExtensionOptions): Plugin {
   let finalConfig: ResolvedConfig
