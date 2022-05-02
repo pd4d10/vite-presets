@@ -13,5 +13,6 @@
     "singleQuote": true,
     "semi": false,
     "proseWrap": "never"
-  }
+  },
+  "packageManager": "pnpm@7.0.0"
 }
