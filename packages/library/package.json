@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@types/fs-extra": "^9.0.13",
-    "@types/lodash.camelcase": "^4.3.7",
+    "@types/lodash": "^4.14.182",
     "@types/node": "^17.0.30",
     "fs-extra": "^10.1.0",
-    "lodash.camelcase": "^4.3.0"
+    "lodash": "^4.17.21"
   }
 }

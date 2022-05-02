@@ -1,7 +1,7 @@
 import fs from 'fs-extra'
 import path from 'path'
 import { Plugin, LibraryFormats, UserConfig, mergeConfig } from 'vite'
-import camelCase from 'lodash.camelcase'
+import camelCase from 'lodash/camelcase'
 
 export interface LibraryOptions {
   exports: Record<string, string>

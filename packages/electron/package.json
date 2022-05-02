@@ -8,5 +8,9 @@
   ],
   "peerDependencies": {
     "vite": "^2.0.0"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.182",
+    "lodash": "^4.17.21"
   }
 }

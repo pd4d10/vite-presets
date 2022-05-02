@@ -1,7 +1,7 @@
 import fs from 'fs-extra'
 import { mergeConfig, Plugin, ResolvedConfig, UserConfig } from 'vite'
-import get from 'lodash.get'
-import set from 'lodash.set'
+import get from 'lodash/get'
+import set from 'lodash/set'
 import path from 'path'
 
 export interface WebExtensionOptions {
